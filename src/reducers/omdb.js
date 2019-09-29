@@ -12,6 +12,7 @@ export const omdb = (state = initialState, { type, payload }) => {
 
     switch(type) {
         case cnt.FILMS_FETCH:
+            console.log(555);
             return {
                 ...state,
                 isFetching: true,

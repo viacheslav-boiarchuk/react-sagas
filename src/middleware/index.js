@@ -9,6 +9,9 @@ const createGameMiddleWare = configureStore => next => {
             case cnt.LOADER_SHOW:
                 console.log('YRA!');
                 return next(action);
+            case cnt.FILMS_FETCH:
+                console.log('88888');
+                return next(action);
             default:
                 return next(action);
         }

@@ -11,7 +11,7 @@ import { searchFilm } from '../services/omdb';
 export function* processFilms({ payload }) {
     try {
         yield put(showLoader());
-        const response = yield call(searchFilm('Matrix'), payload);
+        const response = yield call(searchFilm, payload);
 
         console.log(response);
         yield put(filmsFetchSuccess(response));
@@ -25,6 +25,9 @@ export function* processFilms({ payload }) {
 export function* watchOMDB() {
     yield takeLatest(FILMS_FETCH, processFilms);
 }
+
+
+// почему постоянно срабатывает yield
 
 ////////////// somewhere in the thunk world ///////////////////////
 //// (redux example)
