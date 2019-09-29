@@ -8,7 +8,7 @@ function App(props) {
     if (flag < 2) {
         setTimeout(function () {
             return props.fetchFilms({
-                symbol1: 'ONE!'
+                film: 'Matrix'
             });
         },2000);
         flag++;

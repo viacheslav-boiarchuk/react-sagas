@@ -11,7 +11,7 @@ import { searchFilm } from '../services/omdb';
 export function* processFilms({ payload }) {
     try {
         yield put(showLoader());
-        const response = yield call(searchFilm, payload);
+        const response = yield call(searchFilm, payload.film);
 
         console.log(response);
         yield put(filmsFetchSuccess(response));
