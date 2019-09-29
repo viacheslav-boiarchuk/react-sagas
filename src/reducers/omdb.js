@@ -1,4 +1,4 @@
-import * as cnt from 'actions/constants';
+import * as cnt from '../actions/constants';
 
 const initialState = {
     filmName: '',
@@ -8,7 +8,7 @@ const initialState = {
     filmInfo: {}
 };
 
-export const groups = (state = initialState, { type, payload }) => {
+export const omdb = (state = initialState, { type, payload }) => {
 
     switch(type) {
         case cnt.FILMS_FETCH:
@@ -16,6 +16,12 @@ export const groups = (state = initialState, { type, payload }) => {
                 ...state,
                 isFetching: true,
                 hasError: false
+            };
+
+        case cnt.LOADER_SHOW:
+            console.log('vivat!');
+            return {
+                ...state
             };
 
         case cnt.FILMS_SUCCESS:

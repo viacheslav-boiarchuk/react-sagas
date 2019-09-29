@@ -1,5 +1,5 @@
 export const searchFilm = filmName => {
-    const API_KEY = '?apikey=ef44ae0d';
+    const API_KEY = '?apikey=d412ad69';
     const url = `http://www.omdbapi.com/${API_KEY}&t=`;
 
     if (!filmName) {

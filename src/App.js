@@ -1,9 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+let flag = 1;
 
-function App() {
-  return (
+function App(props) {
+
+    if (flag < 2) {
+        setTimeout(function () {
+            return props.fetchFilms({
+                symbol1: 'ONE!'
+            });
+        },2000);
+        flag++;
+    }
+
+    return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
